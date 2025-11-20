@@ -2,13 +2,10 @@
 
 <img src="./images/logo.png" alt="OMPL.JAX Logo" width="400">
 
-# OMPL.JAX
-
 </div>
 
+# OMPL.JAX
 ⚠️ Hey there! This project is still under construction - check back soon!
-
-Forked version of pyroki: https://github.com/CoMMALab/pyroki/tree/main
 
 # TODO
 
