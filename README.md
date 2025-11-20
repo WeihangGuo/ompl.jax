@@ -1,6 +1,6 @@
 <div align="center">
 
-![OMPL.JAX Logo](./images/logo.png)
+<img src="./images/logo.png" alt="OMPL.JAX Logo" width="400">
 
 # OMPL.JAX
 
