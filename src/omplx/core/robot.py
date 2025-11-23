@@ -52,6 +52,7 @@ class Robot:
     def from_urdf(
         cls, 
         urdf_path: str,
+        srdf_path: str,
         mesh_dir: Optional[str] = None,
         end_effector_link: Optional[str] = None,
         default_joint_cfg: Optional[Float[Array, "n"]] = None,
@@ -75,7 +76,7 @@ class Robot:
                              if j.type in ["revolute", "prismatic", "continuous"]]
             default_joint_cfg = jnp.zeros(len(actuated_joints))
         pyroki_robot = pk.Robot.from_urdf(urdf, default_joint_cfg=default_joint_cfg)
-        collision_model = pk.collision.RobotCollisionSpherized.from_urdf(urdf)
+        collision_model = pk.collision.RobotCollisionSpherized.from_urdf(urdf, srdf_path=srdf_path)
         if end_effector_link is not None:
             end_effector_link = pyroki_robot.links.names[-1]
         return cls(pyroki_robot, collision_model, urdf, end_effector_link)
